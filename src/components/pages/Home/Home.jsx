@@ -1,28 +1,30 @@
-// import { useState, useEffect } from "react";
-// import Cover from "../../Cover/Cover";
+import { useState, useEffect } from "react";
 import Banner from "../../Banner/Banner";
 import Gallery from "../../Gallery/Gallery";
 
 export default function Home() {
-  // const [locations, setLocations] = useState("");
+  const [locations, setLocations] = useState(null);
 
-  // useEffect(
-  //   () => async () => {
-  //     const result = await fetch("../data/logements.json");
-  //     const data = await result.json();
-  //     setLocations(data);
-  //   },
-  //   []
-  // );
+  useEffect(() => {
+    fetch("data/logements.json")
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+        throw new Error("server response error");
+      })
+      .then((res) => setLocations(res))
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
     <section>
       <Banner
-        src="assets/png/Banner.png"
-        alt="placeholder"
+        src="assets/png/Banner_Home.png"
+        alt="Sea shore and forest."
         title="Chez vous, partout et ailleurs"
       />
-      <Gallery />
+      {locations ? <Gallery locations={locations} /> : <p>Loading...</p>}
     </section>
   );
 }

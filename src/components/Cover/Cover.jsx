@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 
-export default function Cover({ id, cover, title }) {
+export default function Cover({ item }) {
   return (
-    <Link to={`location/:${id}`}>
+    <Link to={`location/:${item.id}`}>
       <article>
         <img
-          src={cover}
-          alt={title}
+          src={item.cover}
+          alt={item.title}
         ></img>
-        <h2>{title}</h2>
+        <h2>{item.title}</h2>
       </article>
     </Link>
   );
