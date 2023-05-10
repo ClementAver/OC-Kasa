@@ -16,7 +16,7 @@ export default function Collapse({ title, labor }) {
   };
 
   return (
-    <article>
+    <article className="collapse">
       <header onClick={handleClick}>
         <h2>{title}</h2>
         <CollapseButton deg={rotation}>

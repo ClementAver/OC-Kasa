@@ -1,1 +1,58 @@
+$base-color: #ff6060;
+$light-grey: #f6f6f6;
+$mid-grey: #e3e3e3;
+$dark-grey: #c4c4c4;
+
+@import "./components/pages/Location/Location";
+@import "./components/pages/NotFound/NotFound";
+
 @import "./components/Header/Header";
+@import "./components/Banner/Banner";
+@import "./components/Gallery/Gallery";
+@import "./components/Cover/Cover";
+@import "./components/Footer/Footer";
+@import "./components/LocationCover/LocationCover";
+@import "./components/Tag/Tag";
+@import "./components/Collapse/Collapse";
+
+:root {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: $base-color;
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+ul,
+li,
+div,
+span,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $base-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+body {
+  margin: 0 auto;
+  font-weight: 500;
+  display: flex;
+}
+
+.App {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+  height: 100%;
+}

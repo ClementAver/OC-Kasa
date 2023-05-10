@@ -1,0 +1,34 @@
+.banner {
+  display: grid;
+  grid-template-areas: "header";
+
+  max-width: 1240px;
+  margin: 0 auto 2.8rem auto;
+
+  img,
+  div,
+  h1 {
+    grid-area: header;
+  }
+
+  div {
+    background-color: black;
+    opacity: 0.3;
+    border-radius: 2rem;
+  }
+
+  img {
+    width: 100%;
+    max-height: 16rem;
+    object-fit: cover;
+    border-radius: 2rem;
+  }
+
+  h1 {
+    color: white;
+    z-index: 1;
+    margin: auto;
+    font-size: 3rem;
+    font-weight: 500;
+  }
+}

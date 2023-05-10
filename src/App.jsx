@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./components/pages/Home/Home";
 import About from "./components/pages/About/About";
 import Header from "./components/Header/Header";
-import NotFound from "./components/pages/NotFound/Notfound";
+import NotFound from "./components/pages/NotFound/NotFound";
 import Location from "./components/pages/Location/Location";
 import Footer from "./components/Footer/Footer";
 import { ThemeProvider } from "styled-components";
@@ -37,7 +37,7 @@ function App() {
             element={<NotFound />}
           />
         </Routes>
-        <Footer />
+        <Footer color={"white"} />
       </div>
     </ThemeProvider>
   );

@@ -1,0 +1,66 @@
+.cover {
+  height: 340px;
+  position: relative;
+  --scale-img: 1.001;
+  --opacity: 1;
+  --scale-figure: 1;
+
+  figure {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 1rem;
+    transform: scale(var(--scale-figure));
+    transition: transform 0.3s ease-in-out;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem;
+      transform: scale(var(--scale-img));
+      transform-origin: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    div {
+      opacity: var(--opacity);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem;
+      background: linear-gradient(to top, hsla(0, 0%, 0%, 0.75), 25%, hsla(0, 0%, 0%, 0));
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+
+  h2 {
+    color: white;
+    opacity: var(--opacity);
+    position: absolute;
+    bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: opacity 0.2s ease-out;
+  }
+
+  a {
+    &::after {
+      content: "";
+      position: absolute;
+      inset-block: 0;
+      inset-inline: 0;
+      cursor: pointer;
+    }
+  }
+
+  &:hover {
+    --scale-img: 1.1;
+    --opacity: 0;
+    --scale-figure: 0.9;
+  }
+}

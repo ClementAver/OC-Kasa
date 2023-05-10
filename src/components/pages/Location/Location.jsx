@@ -26,7 +26,7 @@ export default function Location() {
     const location = locations.filter((item) => item.id === id.slice(1))[0];
 
     return (
-      <div>
+      <main className="location">
         <LocationCover sources={location.pictures} />
         <header>
           <div>
@@ -35,29 +35,36 @@ export default function Location() {
             <Tags tags={location.tags} />
           </div>
           <div>
-            <span>{location.host.name}</span>
-            <img
-              src={location.host.picture}
-              alt={location.host.name}
-            ></img>
-            <Rating rating={location.rating} />
-            <Collapse
-              title="Description"
-              labor={<p>{location.description}</p>}
-            />
-            <Collapse
-              title="Équipements"
-              labor={
-                <ul>
-                  {location.equipments.map((i) => (
-                    <li key={i}>{i}</li>
-                  ))}
-                </ul>
-              }
+            <div className="profile">
+              <span>{location.host.name}</span>
+              <img
+                src={location.host.picture}
+                alt={location.host.name}
+              ></img>
+            </div>
+            <Rating
+              className="rating"
+              rating={location.rating}
             />
           </div>
         </header>
-      </div>
+        <section className="collapse-location">
+          <Collapse
+            title="Description"
+            labor={<p>{location.description}</p>}
+          />
+          <Collapse
+            title="Équipements"
+            labor={
+              <ul>
+                {location.equipments.map((i) => (
+                  <li key={i}>{i}</li>
+                ))}
+              </ul>
+            }
+          />
+        </section>
+      </main>
     );
   } else {
     return <p>Loading...</p>;

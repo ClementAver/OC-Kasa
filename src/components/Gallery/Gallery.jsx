@@ -2,7 +2,7 @@ import Cover from "../Cover/Cover";
 
 export default function Gallery({ locations }) {
   return (
-    <main>
+    <main className="gallery">
       {locations ? (
         locations.map((i) => (
           <Cover

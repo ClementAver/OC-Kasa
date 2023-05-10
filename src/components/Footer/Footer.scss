@@ -1,0 +1,18 @@
+.footer {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  align-items: center;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  font-size: 1.5rem;
+
+  margin-top: auto;
+
+  svg {
+    width: 8rem;
+  }
+}

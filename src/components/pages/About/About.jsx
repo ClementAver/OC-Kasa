@@ -7,7 +7,6 @@ export default function About() {
       <Banner
         src="assets/png/Banner_About.png"
         alt="Forest openning on mountains and sky."
-        title="À propos"
       />
       <Collapse
         title="Fiabilité"

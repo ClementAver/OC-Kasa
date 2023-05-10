@@ -1,0 +1,51 @@
+.location {
+  > header:first-of-type {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto 2rem;
+    height: 122px;
+
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      border-radius: 50%;
+      width: 4rem;
+      height: 4rem;
+    }
+
+    > div:last-of-type {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: end;
+      height: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  h1 + span {
+    display: inline-block;
+    margin-bottom: 2rem;
+  }
+}
+
+.profile {
+  display: flex;
+  font-size: 1.125rem;
+  align-items: center;
+  gap: 1rem;
+}
+
+.collapse-location {
+  display: flex;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto 4rem;
+  gap: 4.75rem;
+}

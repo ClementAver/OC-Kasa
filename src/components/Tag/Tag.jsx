@@ -1,3 +1,3 @@
 export default function Tag({ tag }) {
-  return <span>{tag}</span>;
+  return <span className="tag">{tag}</span>;
 }

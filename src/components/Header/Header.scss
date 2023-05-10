@@ -1,5 +1,15 @@
 .main-header {
+  width: 100%;
+  max-width: 1240px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
+  margin: 2rem auto 3rem auto;
+
+  nav {
+    display: flex;
+    font-size: 1.5rem;
+    gap: 3.5rem;
+  }
 }

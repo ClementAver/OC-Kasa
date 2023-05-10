@@ -14,9 +14,8 @@ export default function LocationCover({ sources }) {
 
   if (sources.length > 1) {
     return (
-      <section>
+      <section className="location-cover">
         <img
-          className=""
           src={sources[count]}
           alt="palceholder"
         ></img>
@@ -27,7 +26,7 @@ export default function LocationCover({ sources }) {
             height="80"
             viewBox="0 0 48 80"
             fill="none"
-            filter="drop-shadow(2 2 0.2rem hsla(0, 0%, 0%, 0.5))"
+            filter="drop-shadow(0.1rem 0.1rem 0.1rem hsla(0, 0%, 0%, 0.5))"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -42,7 +41,7 @@ export default function LocationCover({ sources }) {
             height="80"
             viewBox="0 0 48 80"
             fill="none"
-            filter="drop-shadow(2 2 0.2rem hsla(0, 0%, 0%, 0.5))"
+            filter="drop-shadow(0.1rem 0.1rem 0.1rem hsla(0, 0%, 0%, 0.5))"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -55,7 +54,7 @@ export default function LocationCover({ sources }) {
     );
   } else {
     return (
-      <section>
+      <section className="location-cover">
         <img
           src={sources[count]}
           alt="palceholder"
