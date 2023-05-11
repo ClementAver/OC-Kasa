@@ -1,23 +1,25 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 export default function NavBar() {
-  const [nav, setNav] = useState({ url: `${window.location.href}`, home: "", about: "" });
+  const location = useLocation();
 
-  window.addEventListener("change", () => {
+  const [nav, setNav] = useState({ home: "", about: "" });
+
+  useEffect(() => {
     switch (window.location.href) {
       case "http://localhost:3000/":
         console.log(window.location.href);
-        setNav({ url: `${window.location.href}`, home: "underlined", about: "" });
+        setNav({ home: "underlined", about: "" });
         break;
       case "http://localhost:3000/about":
         console.log(window.location.href);
-        setNav({ url: `${window.location.href}`, home: "", about: "underlined" });
+        setNav({ home: "", about: "underlined" });
         break;
       default:
-        return null;
+        setNav({ home: "", about: "" });
     }
-  });
+  }, [location]);
 
   return (
     <nav>
