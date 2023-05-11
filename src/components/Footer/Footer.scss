@@ -10,7 +10,16 @@
   padding-bottom: 2rem;
   font-size: 1.5rem;
 
+  @media screen and (max-width: map-get($breakpoints, l)) {
+    position: relative;
+    left: -1rem;
+  }
+
   margin-top: auto;
+
+  @media screen and (max-width: map-get($breakpoints, s)) {
+    font-size: 0.75rem;
+  }
 
   svg {
     width: 8rem;

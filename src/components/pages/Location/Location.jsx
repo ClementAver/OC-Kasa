@@ -25,47 +25,51 @@ export default function Location() {
   if (locations) {
     const location = locations.filter((item) => item.id === id.slice(1))[0];
 
-    return (
-      <main className="location">
-        <LocationCover sources={location.pictures} />
-        <header>
-          <div>
-            <h1>{location.title}</h1>
-            <span>{location.location}</span>
-            <Tags tags={location.tags} />
-          </div>
-          <div>
-            <div className="profile">
-              <span>{location.host.name}</span>
-              <img
-                src={location.host.picture}
-                alt={location.host.name}
-              ></img>
+    if (location) {
+      return (
+        <main className="location">
+          <LocationCover sources={location.pictures} />
+          <header>
+            <div>
+              <h1>{location.title}</h1>
+              <span>{location.location}</span>
+              <Tags tags={location.tags} />
             </div>
-            <Rating
-              className="rating"
-              rating={location.rating}
+            <div>
+              <div className="profile">
+                <span>{location.host.name}</span>
+                <img
+                  src={location.host.picture}
+                  alt={location.host.name}
+                ></img>
+              </div>
+              <Rating
+                className="rating"
+                rating={location.rating}
+              />
+            </div>
+          </header>
+          <section className="collapse-location">
+            <Collapse
+              title="Description"
+              labor={<p>{location.description}</p>}
             />
-          </div>
-        </header>
-        <section className="collapse-location">
-          <Collapse
-            title="Description"
-            labor={<p>{location.description}</p>}
-          />
-          <Collapse
-            title="Équipements"
-            labor={
-              <ul>
-                {location.equipments.map((i) => (
-                  <li key={i}>{i}</li>
-                ))}
-              </ul>
-            }
-          />
-        </section>
-      </main>
-    );
+            <Collapse
+              title="Équipements"
+              labor={
+                <ul>
+                  {location.equipments.map((i) => (
+                    <li key={i}>{i}</li>
+                  ))}
+                </ul>
+              }
+            />
+          </section>
+        </main>
+      );
+    } else {
+      throw new Error("location isn't valid");
+    }
   } else {
     return <p>Loading...</p>;
   }

@@ -22,7 +22,7 @@ export default function Home() {
       <Banner
         src="assets/png/Banner_Home.png"
         alt="Sea shore and forest."
-        title="Chez vous, partout et ailleurs"
+        title="Chez vous, partout&nbsp;et&nbsp;ailleurs"
       />
       {locations ? <Gallery locations={locations} /> : <p>Loading...</p>}
     </section>

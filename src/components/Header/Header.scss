@@ -6,10 +6,37 @@
   justify-content: space-between;
   align-items: center;
   margin: 2rem auto 3rem auto;
+  box-sizing: border-box;
+
+  @media screen and (max-width: map-get($breakpoints, l)) {
+    padding: 0 0 1.2rem;
+  }
+
+  @media screen and (max-width: map-get($breakpoints, s)) {
+    margin: 2rem auto 0rem auto;
+  }
+
+  svg {
+    margin-right: 1rem;
+    @media screen and (max-width: map-get($breakpoints, s)) {
+      width: 75%;
+      min-width: 9rem;
+    }
+  }
 
   nav {
     display: flex;
     font-size: 1.5rem;
     gap: 3.5rem;
+
+    @media screen and (max-width: map-get($breakpoints, s)) {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      gap: 1rem;
+    }
+  }
+
+  a {
+    white-space: nowrap;
   }
 }

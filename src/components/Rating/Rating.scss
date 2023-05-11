@@ -1,0 +1,10 @@
+.rating {
+  display: flex;
+  gap: 0.4rem;
+
+  svg {
+    @media screen and (max-width: map-get($breakpoints, s)) {
+      width: 1rem;
+    }
+  }
+}

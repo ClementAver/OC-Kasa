@@ -3,10 +3,13 @@
   background-color: $base-color;
   color: white;
   border-radius: 0.6rem;
-  margin-right: 1rem;
   font-size: 0.875rem;
 
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  @media screen and (max-width: map-get($breakpoints, s)) {
+    font-size: 0.625rem;
+  }
 }

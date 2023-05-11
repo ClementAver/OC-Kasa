@@ -1,11 +1,8 @@
-import { Routes, Route } from "react-router-dom";
-import Home from "./components/pages/Home/Home";
-import About from "./components/pages/About/About";
 import Header from "./components/Header/Header";
-import NotFound from "./components/pages/NotFound/NotFound";
-import Location from "./components/pages/Location/Location";
 import Footer from "./components/Footer/Footer";
 import { ThemeProvider } from "styled-components";
+import { Navigate, Outlet } from "react-router-dom";
+import { useEffect } from "react";
 
 const theme = {
   base: {
@@ -15,28 +12,18 @@ const theme = {
 };
 
 function App() {
+  useEffect(() => {
+    <Navigate
+      to="/home"
+      replace={true}
+    />;
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
         <Header color={theme.base.primary} />
-        <Routes>
-          <Route
-            path="/"
-            element={<Home />}
-          />
-          <Route
-            path="/location/:id"
-            element={<Location />}
-          />
-          <Route
-            path="/about"
-            element={<About />}
-          />
-          <Route
-            path="*"
-            element={<NotFound />}
-          />
-        </Routes>
+        <Outlet />
         <Footer color={"white"} />
       </div>
     </ThemeProvider>

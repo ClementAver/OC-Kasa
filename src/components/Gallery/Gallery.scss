@@ -5,9 +5,16 @@
   box-sizing: border-box;
   max-width: 1240px;
   margin: 0 auto 3rem;
-  padding: 3.5rem;
+  padding: 2rem;
   gap: 3rem;
 
   background-color: $light-grey;
   border-radius: 1.5rem;
+
+  @media screen and (max-width: map-get($breakpoints, s)) {
+    background-color: white;
+    margin: 0rem auto 1rem;
+    padding: 0;
+    gap: 1rem;
+  }
 }
