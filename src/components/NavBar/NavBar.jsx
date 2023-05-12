@@ -9,11 +9,9 @@ export default function NavBar() {
   useEffect(() => {
     switch (window.location.href) {
       case "http://localhost:3000/":
-        console.log(window.location.href);
         setNav({ home: "underlined", about: "" });
         break;
       case "http://localhost:3000/about":
-        console.log(window.location.href);
         setNav({ home: "", about: "underlined" });
         break;
       default:

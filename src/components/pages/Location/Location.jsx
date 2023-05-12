@@ -23,7 +23,8 @@ export default function Location() {
   }, []);
 
   if (locations) {
-    const location = locations.filter((item) => item.id === id.slice(1))[0];
+    let location = locations.filter((item) => item.id === id.slice(1));
+    location = location.length >= 1 ? location[0] : null;
 
     if (location) {
       return (
