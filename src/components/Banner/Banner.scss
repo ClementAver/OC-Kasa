@@ -49,10 +49,12 @@
     font-size: 3rem;
     font-weight: 500;
     margin: auto 2rem;
+    text-align: center;
 
     @media screen and (max-width: map-get($breakpoints, s)) {
       margin: auto 1rem;
       font-size: 1.5rem;
+      text-align: left;
     }
   }
 }
