@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Banner from "../../Banner/Banner";
-import Gallery from "../../Gallery/Gallery";
+import Banner from "../../components/Banner/Banner";
+import Gallery from "../../components/Gallery/Gallery";
 
 export default function Home() {
   const [locations, setLocations] = useState(null);

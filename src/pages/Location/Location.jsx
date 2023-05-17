@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import LocationCover from "../../LocationCover/LocationCover";
-import Tags from "../../Tags/Tags";
-import Rating from "../../Rating/Rating";
-import Collapse from "../../Collapse/Collapse";
+import LocationCover from "../../components/LocationCover/LocationCover";
+import Tags from "../../components/Tags/Tags";
+import Rating from "../../components/Rating/Rating";
+import Collapse from "../../components/Collapse/Collapse";
 
 export default function Location() {
   const { id } = useParams();
