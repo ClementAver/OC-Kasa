@@ -1,10 +1,9 @@
 # Kasa
 
 <div>
-<img alt="Static Badge" src="https://img.shields.io/badge/HTML%205-orange">
-<img alt="Static Badge" src="https://img.shields.io/badge/Sass-pink">
-<img alt="Static Badge" src="https://img.shields.io/badge/React-blue">
-<img alt="Static Badge" src="https://img.shields.io/badge/React%20Router%20-red">
+  <img alt="Static Badge" src="https://img.shields.io/badge/React-blue">
+  <img alt="Static Badge" src="https://img.shields.io/badge/React%20Router%20-red">
+  <img alt="Static Badge" src="https://img.shields.io/badge/Sass-pink">
 </div>
 
 Kasa is the project that introduced us to React and React Router. 
